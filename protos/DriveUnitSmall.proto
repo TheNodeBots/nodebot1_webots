@@ -1,0 +1,105 @@
+#VRML_SIM R2023a utf8
+# license: Creative Commons Attribution 4.0 International License.
+# license url: https://creativecommons.org/licenses/by/4.0/legalcode
+# documentation url: 
+# A small drive unit usable for small robots
+
+PROTO DriveUnitSmall [
+  field SFVec3f    translation  0 0 0
+  field SFRotation rotation     0 0 1 0
+  field SFString   name         "DriveUnit"
+  field SFString   motorName    "Motor"
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    boundingObject Transform {
+      translation -0.021 -0.01 0
+      children [
+        Shape {
+          geometry Box {
+            size 0.063 0.019 0.025
+          }
+        }
+      ]
+    }
+    physics Physics {
+      density -1
+      mass 0.035
+    }
+    children [
+      Transform {
+        translation -0.0395 -0.01 0
+        rotation 0 1 0 1.5707996938995747
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 0.5 0.5
+              roughness 1
+            }
+            geometry Cylinder {
+              height 0.025
+              radius 0.0095
+            }
+          }
+        ]
+      }
+      Transform {
+        translation -0.0085 -0.01 0
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 1 1 0
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.037 0.019 0.023
+            }
+          }
+        ]
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0 1 0
+          anchor 0 0 0
+        }
+        device [
+          RotationalMotor {
+            name IS motorName
+          }
+        ]
+        endPoint Solid {
+          translation 0 0.0126 0
+          rotation 1 0 0 -1.5707996938995747
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.025
+                radius 0.033
+              }
+            }
+          ]
+          boundingObject Shape {
+            geometry Cylinder {
+              height 0.025
+              radius 0.033
+            }
+          }
+          physics Physics {
+            density -1
+            mass 0.025
+          }
+#          contactMaterial "rubber"
+        }
+      }
+    ]
+  }
+}

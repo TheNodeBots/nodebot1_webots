@@ -1,0 +1,41 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "../protos/ChassisSmall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+  basicTimeStep 10
+  optimalThreadCount 3
+}
+Viewpoint {
+  orientation 0.5705555249844536 -0.5749146439896796 -0.5864635922509891 4.209061156960474
+  position 0.018692052042701735 -0.29496101481885584 9.66348810673386
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+  floorAppearance Parquetry {
+    type "chequered"
+    colorOverride 0.5 0.5 0.5
+  }
+  wallHeight 0.2
+}
+WoodenBox {
+  translation 0.06 0.54608 0.3
+  rotation 0 0 1 -2.6179953071795863
+}
+WoodenBox {
+  translation 0.0491757 -0.593525 0.3
+  rotation 0 0 1 0.261799
+  name "wooden box(1)"
+}
+ChassisSmall {
+  controller "ChassisSmallCollisionAvoidance"
+}
