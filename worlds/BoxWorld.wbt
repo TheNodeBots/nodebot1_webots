@@ -57,5 +57,6 @@ WoodenBox {
   name "wooden box(3)"
 }
 ChassisSmall {
+  name "NodeBot1"
   controller "ChassisSmallCollisionAvoidance"
 }
