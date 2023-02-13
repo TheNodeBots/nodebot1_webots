@@ -13,7 +13,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0.5724318602714312 -0.5710659626873293 -0.5883922429860736 4.203186861428385
-  position 0.01989517120333839 -0.24889967872847096 7.827260467991327
+  position 0.01999696315869364 -0.2915085516755022 9.376477631061062
 }
 TexturedBackground {
 }
@@ -57,5 +57,6 @@ WoodenBox {
   name "wooden box(3)"
 }
 ChassisSmall {
-  controller "ChassisSmallCollisionAvoidance"
+  name "NodeBot1"
+  controller "<extern>"
 }
