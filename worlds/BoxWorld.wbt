@@ -12,8 +12,8 @@ WorldInfo {
   optimalThreadCount 3
 }
 Viewpoint {
-  orientation 0.5705555249844536 -0.5749146439896796 -0.5864635922509891 4.209061156960474
-  position 0.018692052042701735 -0.29496101481885584 9.66348810673386
+  orientation 0.5724318602714312 -0.5710659626873293 -0.5883922429860736 4.203186861428385
+  position 0.01989517120333839 -0.24889967872847096 7.827260467991327
 }
 TexturedBackground {
 }
@@ -28,13 +28,33 @@ RectangleArena {
   wallHeight 0.2
 }
 WoodenBox {
+  translation -1.08729 1.37323 0.3
+  rotation 0 0 1 -2.6179953071795863
+}
+WoodenBox {
   translation 0.06 0.54608 0.3
   rotation 0 0 1 -2.6179953071795863
+  name "wooden box(2)"
+}
+WoodenBox {
+  translation 1.39366 1.31608 0.3
+  rotation 0 0 1 -2.6179953071795863
+  name "wooden box(4)"
 }
 WoodenBox {
   translation 0.0491757 -0.593525 0.3
   rotation 0 0 1 0.261799
   name "wooden box(1)"
+}
+WoodenBox {
+  translation -1.18044 -1.18183 0.3
+  rotation 0 0 1 0.261799
+  name "wooden box(5)"
+}
+WoodenBox {
+  translation 1.35536 -1.52722 0.3
+  rotation 0 0 1 0.261799
+  name "wooden box(3)"
 }
 ChassisSmall {
   controller "ChassisSmallCollisionAvoidance"
