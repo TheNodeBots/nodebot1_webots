@@ -28,9 +28,9 @@ using namespace webots;
 // definition of distance for angular sensors in cm
 #define ANGULAR_DISTANCE 70.0
 // definition of distance for side sensors in cm
-#define SIDE_DISTANCE 10.0
+#define SIDE_DISTANCE 15.0
 // sensivity of the side sensors [-1, 1]
-#define SENSIVITY 0.20
+#define SENSIVITY 0.15
 
 // location definitions fitting the arrays
 #define FRONT  0
@@ -227,13 +227,13 @@ int main(int argc, char **argv) {
     if(leftSpeed + rightSpeed > (2 * MIN_SPEED)) {
       frontSensors->enable();
       rearSensors ->disable();
-      leftSpeed  = (oldLeftSpeed  + wantedSpeed * (frontSensors->getMinValue() + SENSIVITY*frontSensors->getSideValue(LEFT) - SENSIVITY*frontSensors->getSideValue(RIGHT) + leftSensor->getValue() - rightSensor->getValue())) / 4.0;
-      rightSpeed = (oldRightSpeed + wantedSpeed * (frontSensors->getMinValue() - SENSIVITY*frontSensors->getSideValue(LEFT) + SENSIVITY*frontSensors->getSideValue(RIGHT) - leftSensor->getValue() + rightSensor->getValue())) / 4.0;
+      leftSpeed  = (oldLeftSpeed  + wantedSpeed * (frontSensors->getMinValue() + SENSIVITY*frontSensors->getSideValue(LEFT) - SENSIVITY*frontSensors->getSideValue(RIGHT) + SENSIVITY*leftSensor->getValue() - SENSIVITY*rightSensor->getValue())) / 4.0;
+      rightSpeed = (oldRightSpeed + wantedSpeed * (frontSensors->getMinValue() - SENSIVITY*frontSensors->getSideValue(LEFT) + SENSIVITY*frontSensors->getSideValue(RIGHT) - SENSIVITY*leftSensor->getValue() + SENSIVITY*rightSensor->getValue())) / 4.0;
     } else if(leftSpeed + rightSpeed < -(2 * MIN_SPEED)) {
       frontSensors->disable();
       rearSensors ->enable();
-      leftSpeed  = (oldLeftSpeed  + wantedSpeed * (rearSensors->getMinValue() + SENSIVITY*rearSensors->getSideValue(LEFT) - SENSIVITY*rearSensors->getSideValue(RIGHT) - leftSensor->getValue() + rightSensor->getValue())) / 4.0;
-      rightSpeed = (oldRightSpeed + wantedSpeed * (rearSensors->getMinValue() - SENSIVITY*rearSensors->getSideValue(LEFT) + SENSIVITY*rearSensors->getSideValue(RIGHT) + leftSensor->getValue() - rightSensor->getValue())) / 4.0;
+      leftSpeed  = (oldLeftSpeed  + wantedSpeed * (rearSensors->getMinValue() + SENSIVITY*rearSensors->getSideValue(LEFT) - SENSIVITY*rearSensors->getSideValue(RIGHT) - SENSIVITY*leftSensor->getValue() + SENSIVITY*rightSensor->getValue())) / 4.0;
+      rightSpeed = (oldRightSpeed + wantedSpeed * (rearSensors->getMinValue() - SENSIVITY*rearSensors->getSideValue(LEFT) + SENSIVITY*rearSensors->getSideValue(RIGHT) + SENSIVITY*leftSensor->getValue() - SENSIVITY*rightSensor->getValue())) / 4.0;
     } else {
       frontSensors->enable();
       rearSensors ->enable();
