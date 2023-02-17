@@ -11,7 +11,7 @@ def generate_launch_description():
     robot_description = pathlib.Path(os.path.join(package_dir, 'resource', 'webots_chassis.urdf')).read_text()
 
     # fetch controller URL from environment
-    webots_controller_url = os.environ.get('WEBOTS_CONTROLLER_URL')
+    webots_controller_url = os.environ.get('WEBOTS_CONTROLLER_URL') + 'NodeBot1'
 
     webots_chassis_driver = Node(
         package='webots_ros2_driver',
