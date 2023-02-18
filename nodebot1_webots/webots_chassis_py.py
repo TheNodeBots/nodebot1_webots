@@ -39,8 +39,7 @@ class WebotsChassisDriver:
         angular_speed = self.__target_twist.angular.z
 
         command_motor_left = (forward_speed - angular_speed * HALF_DISTANCE_BETWEEN_WHEELS) / WHEEL_RADIUS
-#        command_motor_right = (forward_speed + angular_speed * HALF_DISTANCE_BETWEEN_WHEELS) / WHEEL_RADIUS
-        command_motor_right = (-forward_speed - angular_speed * HALF_DISTANCE_BETWEEN_WHEELS) / WHEEL_RADIUS
+        command_motor_right = (forward_speed + angular_speed * HALF_DISTANCE_BETWEEN_WHEELS) / WHEEL_RADIUS
 
         self.__front_left_motor.setVelocity(command_motor_left)
         self.__front_right_motor.setVelocity(command_motor_right)
