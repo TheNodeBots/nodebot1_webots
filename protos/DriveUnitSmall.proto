@@ -9,6 +9,7 @@ PROTO DriveUnitSmall [
   field SFRotation rotation     0 0 1 0
   field SFString   name         "DriveUnit"
   field SFString   motorName    "Motor"
+  field SFVec3f    axis         0 1 0
 ]
 {
   Solid {
@@ -63,7 +64,7 @@ PROTO DriveUnitSmall [
       }
       HingeJoint {
         jointParameters HingeJointParameters {
-          axis 0 1 0
+          axis IS axis
           anchor 0 0 0
         }
         device [
