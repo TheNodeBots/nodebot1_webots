@@ -221,16 +221,6 @@ PROTO ChassisSmall [
         name "FrontRightDS"
       }
       RCW-0001 {
-        translation 0.0 0.065 0.035
-        rotation 0 0 1 1.570796327
-        name "LeftDS"
-      }
-      RCW-0001 {
-        translation 0.0 -0.065 0.035
-        rotation 0 0 1 -1.570796327
-        name "RightDS"
-      }
-      RCW-0001 {
         translation -0.113 0.055 0.035
         rotation 0 0 1 2.617993878
         name "RearLeftDS"

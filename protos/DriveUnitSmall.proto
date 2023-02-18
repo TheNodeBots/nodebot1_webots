@@ -5,11 +5,11 @@
 # A small drive unit usable for small robots
 
 PROTO DriveUnitSmall [
-  field SFVec3f    translation  0 0 0
-  field SFRotation rotation     0 0 1 0
-  field SFString   name         "DriveUnit"
-  field SFString   motorName    "Motor"
-  field SFVec3f    axis         0 1 0
+  field SFVec3f                   translation  0 0 0
+  field SFRotation                rotation     0 0 1 0
+  field SFString                  name         "DriveUnit"
+  field SFString                  motorName    "Motor"
+  field SFVec3f{0 1 0, 0 -1 0}    axis         0 1 0
 ]
 {
   Solid {
