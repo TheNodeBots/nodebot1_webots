@@ -158,7 +158,7 @@ class MotorController {
         max_speed = 3.0;
       } else {
         sideAsString = "Right";
-        max_speed = -3.0;
+        max_speed = 3.0;
       }
 
       front = robot->getMotor("Front" + sideAsString + "Motor");
