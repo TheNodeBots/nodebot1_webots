@@ -5,6 +5,6 @@ int main(int argc, char ** argv)
   (void) argc;
   (void) argv;
 
-  printf("hello world nodebot1_webots package\n");
+  printf("Hi from webots_chassis\n");
   return 0;
 }
