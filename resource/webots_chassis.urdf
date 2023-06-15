@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <robot name="NodeBot1">
     <webots>
-        <plugin type="nodebot1_webots.webots_chassis_py.WebotsChassisDriver" />
+        <plugin type="nodebot1_webots.webots_chassis.WebotsChassisDriver" />
     </webots>
 </robot>
