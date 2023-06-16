@@ -37,7 +37,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 # install python executables
 install(PROGRAMS
-  scripts/webots_chassis.py
+  scripts/main_script.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
