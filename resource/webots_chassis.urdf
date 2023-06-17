@@ -1,6 +1,44 @@
 <?xml version="1.0" ?>
 <robot name="NodeBot1">
     <webots>
+        <device reference="FrontLeftDS" type="DistanceSensor">
+            <ros>
+                <topicName>/front_left_sensor</topicName>
+                <alwaysOn>false</alwaysOn>
+            </ros>
+        </device>
+        <device reference="FrontCenterDS" type="DistanceSensor">
+            <ros>
+                <topicName>/front_center_sensor</topicName>
+                <alwaysOn>false</alwaysOn>
+            </ros>
+        </device>
+        <device reference="FrontRightDS" type="DistanceSensor">
+            <ros>
+                <topicName>/front_right_sensor</topicName>
+                <alwaysOn>false</alwaysOn>
+            </ros>
+        </device>
+
+        <device reference="RearLeftDS" type="DistanceSensor">
+            <ros>
+                <topicName>/rear_left_sensor</topicName>
+                <alwaysOn>false</alwaysOn>
+            </ros>
+        </device>
+        <device reference="RearCenterDS" type="DistanceSensor">
+            <ros>
+                <topicName>/rear_center_sensor</topicName>
+                <alwaysOn>false</alwaysOn>
+            </ros>
+        </device>
+        <device reference="RearRightDS" type="DistanceSensor">
+            <ros>
+                <topicName>/rear_right_sensor</topicName>
+                <alwaysOn>false</alwaysOn>
+            </ros>
+        </device>
+
         <plugin type="nodebot1_webots.webots_chassis.WebotsChassisDriver" />
     </webots>
 </robot>
