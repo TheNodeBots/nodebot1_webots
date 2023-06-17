@@ -1,4 +1,7 @@
 build/
 install/
 log/
+
 *.exe
+.BoxWorld.wbproj
+.BoxWorld.jpg
